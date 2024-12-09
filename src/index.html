@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALL ACTIVITY</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    // Function to redirect to the correct HTML file
+    function toAct1(activityNumber) {
+      let url;
+      if (activityNumber <= 3)
+      {
+        url = `act1to3.html`;
+      }
+      else if (activityNumber >= 4 && activityNumber <= 5)
+      {
+        url = `act4to5.html`;
+      }
+      else
+      {
+        url = `act${activityNumber}.html`;
+      }
+
+      
+      window.location.href = url;
+    }
+    function toAct2()
+    {
+      window.location.href = `act2-1.html`;
+    }
+    function toAct3()
+    {
+      window.location.href = `act3.html`;
+    }
+    function toAct4()
+    {
+      window.location.href = `act4.html`;
+    }
+    </script>
+</head>
+<body>
+  <div>
+    <h1>Claud Gerona ITE 18</h1>
+    <div>
+      <h2>Outputs per part in Activity 1</h2>
+      <script>
+        let flag1to3 = false;
+        let flag4to5 = false;
+        for (let i = 1; i <= 12; i++) {
+          if (i <= 3 && !flag1to3) {
+            document.write(
+              `<button onclick="toAct1(1);" style="margin: 5px;">Act 1-3</button>`
+            );
+            flag1to3 = true; // Mark as rendered
+          } else if (i <= 5 && !flag4to5) {
+            // Render Act 4-5 button
+            document.write(
+              `<button onclick="toAct1(${i});" style="margin: 5px;">Act 4-5</button>`
+            );
+            flag4to5 = true;
+          } else if (i > 5) {
+            // Render individual buttons for acts > 5
+            document.write(
+              `<button onclick="toAct1(${i});" style="margin: 5px;">Act ${i}</button>`
+            );
+          }
+        }
+      </script>
+    </div>
+    <div>
+      <h2>
+        Output for Activity 2
+      </h2>
+      <button onclick="toAct2();" style="margin: 5px;">Haunted Haus Uhuh</button>
+    </div>
+    <div>
+      <h2>
+        Output for Activity 3
+      </h2>
+      <button onclick="toAct3();" style="margin: 5px;">My Universe by Rico Blanco</button>
+    </div>
+    <div>
+      <h2>
+        Output for Activity 4
+      </h2>
+      <button onclick="toAct4();" style="margin: 5px;">Animated Galaxy</button>
+    </div>
+  </div>
+</body>
+</html>

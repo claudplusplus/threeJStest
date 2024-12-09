@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: lightblue;
+  color: #2e7d32;
+}
+
+div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #1b5e20;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #2e7d32;
+}
+
+/* Button Styles */
+button {
+  background-color: #66bb6a;
+  color: black;
+  border: none;
+  padding: 10px 15px;
+  margin: 5px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.674);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover and Active Effects */
+button:hover {
+  background-color: #39a93d;
+  transform: translateY(-5px);
+}
+
+button:active {
+  background-color: #388e3c;
+  transform: translateY(0);
+}
+
+/* Responsive chuchu */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+  }
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+.webgl
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  outline: none;
+}
+
+body
+{
+  overflow: hidden;
+}
