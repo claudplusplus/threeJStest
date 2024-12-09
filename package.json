@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build"
+    "build": "vite build",
+    "vercel-build": "npm run build",
+    "postinstall": "chmod +x node_modules/.bin/vite"
   },
   "devDependencies": {
     "vite": "^4.0.4",
